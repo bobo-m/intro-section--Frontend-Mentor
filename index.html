@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a23965119a.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <img src="images/logo.svg" class="logo">
+  <i class="fa-solid fa-bars" onclick="showSide()" id="bars"></i>
+  <i class="fa-solid fa-xmark" onclick="closeSide()" id="xmark"></i>
+  <ul class="navigation" id="navigation">
+      <li class="nav-link"><a>Features</a>
+        <div class="arrows">
+          <img src="images/icon-arrow-down.svg" class="arrow-down" id="arrow-down" onclick="showMenu()">
+          <img src="images/icon-arrow-up.svg" class="arrow-up" id="arrow-up" onclick="hideMenu()">
+        </div>
+        <ul class="hidden" id="dropdown">
+          <li class="l1">Todo List</li>
+          <li class="l2">Calender</li>
+          <li class="l3">Reminders</li>
+          <li class="l4">Planning</li>
+        </ul>
+      </li>
+      <li class="nav-link" class="company"><a>Company</a>
+        <div class="arrows">
+        <img src="images/icon-arrow-down.svg" class="arrow-down" id="arrow-down1" onclick="showMenu1()">
+        <img src="images/icon-arrow-up.svg" class="arrow-up" id="arrow-up1" onclick="hideMenu1()">
+        <ul class="hidden1" id="dropdown1">
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      </li>
+      <li class="nav-link"><a>Careers</a></li>
+      <li class="nav-link"><a>About</a></li>
+      <li class="login"><a>Login</a></li>
+      <li class="login"><button>Register</button></li>
+  </ul>
+  <div class="container">
+    <div class="left">
+      <h1>Make<br> remote work</h1>
+      <p>Get your team in sync, no matter your location.<br> Streamline processes, 
+        create team rituals, and<br> watch productivity soar.</p>
+      <button>Learn more</button>
+      <div class="icons">
+        <img src="images/client-databiz.svg" class="databiz">
+        <img src="images/client-audiophile.svg" class="audiophile">
+        <img src="images/client-meet.svg" class="meet">
+        <img src="images/client-maker.svg" class="maker">
+      </div>
+    </div>
+    <div class="right">
+      <img src="images/image-hero-desktop.png" class="desktop">
+      <img src="images/image-hero-mobile.png" class="mobile">
+    </div>
+  </div>
+
+  <script>
+    function showMenu(){
+      document.getElementById('dropdown').style.display="block";
+      document.getElementById('arrow-down').style.display="none";
+      document.getElementById('arrow-up').style.display="block";
+    }
+    function showMenu1(){
+      document.getElementById('dropdown1').style.display="block";
+      document.getElementById('arrow-down1').style.display="none";
+      document.getElementById('arrow-up1').style.display="block";
+    }
+    function hideMenu(){
+      document.getElementById('dropdown').style.display="none";
+      document.getElementById('arrow-down').style.display="block";
+      document.getElementById('arrow-up').style.display="none";
+    }
+    function hideMenu1(){
+      document.getElementById('dropdown1').style.display="none";
+      document.getElementById('arrow-down1').style.display="block";
+      document.getElementById('arrow-up1').style.display="none";
+    }
+    function closeSide(){
+      document.getElementById('navigation').style.display="none";
+      document.getElementById('bars').style.display="block";
+      document.getElementById('xmark').style.display="none";
+    }
+    function showSide(){
+      document.getElementById('navigation').style.display="block";
+      document.getElementById('bars').style.display="none";
+      document.getElementById('xmark').style.display="block";
+    }
+  </script>
+</body>
+</html>
